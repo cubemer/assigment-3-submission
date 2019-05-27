@@ -13,14 +13,14 @@ class App extends React.Component {
           <header>
             <nav>
               <ul>
-                <li><NavLink to='/users/' exact>Users</NavLink></li>
-                <li><NavLink to='/courses/' exact>Courses</NavLink></li>
+                <li><NavLink to='/users'>Users</NavLink></li>
+                <li><NavLink to='/courses'>Courses</NavLink></li>
               </ul>
             </nav>
           </header>
           <Switch>
-            <Route path='/users/' component={Users} />
-            <Route path='/courses/' component={Courses} />
+            <Route path='/users' component={Users} />
+            <Route path='/courses' component={Courses} />
             <Redirect from='/all-courses/' to='/courses' />
             <Route render={() => <h1>Error, page not found!</h1>} />
           </Switch>
